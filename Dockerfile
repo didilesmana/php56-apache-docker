@@ -6,9 +6,9 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 # Install php extentions
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions http bcmath bz2 calendar  \
-    exif FFI gd gettext gmp igbinary msgpack mysqli \
+    exif gd gettext gmp igbinary msgpack mysqli \
     pcntl pgsql redis shmop sockets mssql sysvmsg \ 
-    sysvsem sysvshm xsl zip pdo_mysql pdo_pgsql pdo_sqlite
+    sysvsem sysvshm xsl zip pdo_mysql pdo_pgsql
 
 # Config timezone server GMT+7 WIB
 ENV CONTAINER_TIMEZONE="Asia/Jakarta"
